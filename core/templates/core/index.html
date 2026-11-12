@@ -1,0 +1,11 @@
+{% extends "base.html" %}
+{% load i18n %}
+
+{% block content %}
+<section class="section">
+  <div class="container site-container">
+    <h1 class="page-title">{{ site_info.name }}</h1>
+    {% if site_info.tagline %}<p class="page-lede">{{ site_info.tagline }}</p>{% endif %}
+  </div>
+</section>
+{% endblock %}

@@ -1,0 +1,22 @@
+{% load static i18n %}<!doctype html>
+{% get_current_language as LANGUAGE_CODE %}
+<html lang="{{ LANGUAGE_CODE }}">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>{% block title %}{% endblock %}</title>
+  <link rel="icon" href="{% static 'img/favicon.svg' %}" type="image/svg+xml">
+  <link rel="stylesheet" href="{% static 'css/fonts.css' %}">
+  <link rel="stylesheet" href="{% static 'css/app.css' %}">
+</head>
+<body class="auth-page">
+  {# Standalone on purpose: no context processors or database, so it renders even when the app is failing. #}
+  <main class="auth" id="main">
+    <div class="auth__card">
+      <h1 class="auth__title">{% block heading %}{% endblock %}</h1>
+      <p class="auth__lede">{% block message %}{% endblock %}</p>
+      <p class="auth__help"><a href="/">{% translate "Go to the home page" %}</a></p>
+    </div>
+  </main>
+</body>
+</html>

@@ -1,0 +1,28 @@
+{% load static i18n %}<!doctype html>
+{% get_current_language as LANGUAGE_CODE %}
+<html lang="{{ LANGUAGE_CODE }}">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>{% block title %}{{ site_info.name }}{% endblock %}</title>
+  <meta name="description" content="{% block meta_description %}{{ site_info.tagline }}{% endblock %}">
+  <link rel="icon" href="{% static 'img/favicon.svg' %}" type="image/svg+xml">
+  <link rel="stylesheet" href="{% static 'vendor/bootstrap/bootstrap.min.css' %}">
+  <link rel="stylesheet" href="{% static 'css/fonts.css' %}">
+  <link rel="stylesheet" href="{% static 'css/app.css' %}">
+  {% block extra_head %}{% endblock %}
+</head>
+<body class="{% block body_class %}{% endblock %}">
+  <a class="skip-link" href="#main">{% translate "Skip to content" %}</a>
+  {% block body %}
+    {% include "components/site_header.html" %}
+    <main id="main">
+      {% include "components/messages.html" %}
+      {% block content %}{% endblock %}
+    </main>
+    {% include "components/site_footer.html" %}
+  {% endblock %}
+  <script src="{% static 'vendor/bootstrap/bootstrap.bundle.min.js' %}" defer></script>
+  <script src="{% static 'js/app.js' %}" defer></script>
+</body>
+</html>

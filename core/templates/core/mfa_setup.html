@@ -1,0 +1,40 @@
+{% extends "base.html" %}
+{% load i18n %}
+
+{% block title %}{% translate "Set up two-factor sign-in" %} | {{ site_info.name }}{% endblock %}
+{% block body_class %}auth-page{% endblock %}
+
+{% block body %}
+<main class="auth" id="main">
+  <div class="auth__card auth__card--wide">
+    {% include "components/brand.html" %}
+    <h1 class="auth__title">{% translate "Set up two-factor sign-in" %}</h1>
+    <p class="auth__lede">{% translate "Staff accounts need a code from an authenticator app (Google Authenticator, Microsoft Authenticator, 1Password...) at every sign-in." %}</p>
+
+    <ol class="auth__steps">
+      <li>
+        <p>{% translate "Scan this code with your authenticator app." %}</p>
+        <div class="qr" role="img" aria-label="{% translate 'QR code for your authenticator app' %}">{{ qr_svg|safe }}</div>
+        <details class="auth__secret">
+          <summary>{% translate "Can't scan? Enter this key instead" %}</summary>
+          <code>{{ secret }}</code>
+        </details>
+      </li>
+      <li>
+        <form method="post" novalidate>
+          {% csrf_token %}
+          <input type="hidden" name="next" value="{{ next }}">
+          <p>{% translate "Enter the 6-digit code the app shows." %}</p>
+          {% include "components/field.html" with field=form.token %}
+          <button type="submit" class="btn-site btn-site--primary btn-site--block">{% translate "Turn on two-factor sign-in" %}</button>
+        </form>
+      </li>
+    </ol>
+
+    <form method="post" action="{% url 'logout' %}" class="auth__help">
+      {% csrf_token %}
+      <button type="submit" class="link-button">{% translate "Sign out" %}</button>
+    </form>
+  </div>
+</main>
+{% endblock %}

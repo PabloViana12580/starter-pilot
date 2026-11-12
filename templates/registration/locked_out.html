@@ -1,0 +1,16 @@
+{% extends "base.html" %}
+{% load i18n %}
+
+{% block title %}{% translate "Sign-in paused" %} | {{ site_info.name }}{% endblock %}
+{% block body_class %}auth-page{% endblock %}
+
+{% block body %}
+<main class="auth" id="main">
+  <div class="auth__card">
+    {% include "components/brand.html" %}
+    <h1 class="auth__title">{% translate "Sign-in paused" %}</h1>
+    <p class="auth__lede">{% translate "Too many incorrect sign-in attempts for this account from your network. Wait a few minutes and try again, or ask the site administrator to unlock it." %}</p>
+    <p class="auth__help"><a href="/">{% translate "Back to the website" %}</a></p>
+  </div>
+</main>
+{% endblock %}

@@ -1,0 +1,40 @@
+{% extends "base.html" %}
+{% load i18n %}
+
+{% block title %}{% translate "Sign in" %} | {{ site_info.name }}{% endblock %}
+{% block body_class %}auth-page{% endblock %}
+
+{% block body %}
+<main class="auth" id="main">
+  <div class="auth__card">
+    {% include "components/brand.html" %}
+    <h1 class="auth__title">{% translate "Sign in" %}</h1>
+    <p class="auth__lede">{% translate "For staff accounts. Accounts are created by the site administrator." %}</p>
+
+    {% if form.non_field_errors %}
+      <div class="notice notice--error" role="alert">
+        {% for error in form.non_field_errors %}<p>{{ error }}</p>{% endfor %}
+      </div>
+    {% endif %}
+
+    <form method="post" action="{% url 'login' %}" novalidate>
+      {% csrf_token %}
+      <input type="hidden" name="next" value="{{ next }}">
+      <div class="field{% if form.username.errors %} field--invalid{% endif %}">
+        <label class="field__label" for="{{ form.username.id_for_label }}">{{ form.username.label }}</label>
+        <input type="text" name="{{ form.username.html_name }}" id="{{ form.username.id_for_label }}"
+               class="input{% if form.username.errors %} is-invalid{% endif %}"
+               value="{{ form.username.value|default_if_none:'' }}"
+               autocomplete="username" autocapitalize="none" spellcheck="false" required autofocus
+               maxlength="{{ form.username.field.max_length }}"
+               {% if form.username.errors %}aria-invalid="true" aria-describedby="{{ form.username.id_for_label }}-error"{% endif %}>
+        {% if form.username.errors %}<p class="field__error" id="{{ form.username.id_for_label }}-error">{{ form.username.errors|first }}</p>{% endif %}
+      </div>
+      {% include "components/password_field.html" with field=form.password %}
+      <button type="submit" class="btn-site btn-site--primary btn-site--block">{% translate "Sign in" %}</button>
+    </form>
+
+    <p class="auth__help"><a href="/">{% translate "Back to the website" %}</a></p>
+  </div>
+</main>
+{% endblock %}

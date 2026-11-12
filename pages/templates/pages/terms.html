@@ -1,0 +1,25 @@
+{% extends "base.html" %}
+{% load i18n %}
+
+{% block title %}{% translate "Terms of use" %} | {{ site_info.name }}{% endblock %}
+
+{% block content %}
+<section class="section">
+  <div class="container site-container prose">
+    <h1 class="page-title">{% translate "Terms of use" %}</h1>
+    <p class="page-lede">The rules for using the {{ site_info.name }} website.</p>
+
+    <h2>About this website</h2>
+    <p>This website is run by {{ site_info.name }} (OWNER LEGAL NAME, COUNTRY). The information on it describes our services and may change without notice.</p>
+
+    <h2>Content</h2>
+    <p>Texts, photos, logos, and designs on this website belong to {{ site_info.name }} or are used with permission. Please don't reuse them without asking.</p>
+
+    <h2>Liability</h2>
+    <p>We keep the information accurate and up to date, but we can't guarantee it is always complete. Prices and availability are confirmed when you book or order.</p>
+
+    <h2>Contact</h2>
+    <p>Questions about these terms: <a href="mailto:{{ site_info.email }}">{{ site_info.email }}</a>.</p>
+  </div>
+</section>
+{% endblock %}

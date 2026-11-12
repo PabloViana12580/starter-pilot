@@ -1,0 +1,26 @@
+{% load i18n %}
+{# Site header. Links appear for the modules installed in this project (site_info.modules). #}
+<header class="site-header">
+  <nav class="navbar navbar-expand-lg site-nav" aria-label="{% translate 'Main' %}">
+    <div class="container site-container">
+      {% include "components/brand.html" %}
+      <button class="navbar-toggler site-nav__toggler" type="button" data-bs-toggle="collapse" data-bs-target="#site-nav"
+              aria-controls="site-nav" aria-expanded="false">{% translate "Menu" %}</button>
+      <div class="collapse navbar-collapse" id="site-nav">
+        <ul class="navbar-nav ms-lg-auto site-nav__links">
+          {% block nav_links %}
+            {% if 'pages' in site_info.modules %}
+              <li class="nav-item"><a class="nav-link" href="{% url 'pages:about' %}">{% translate "About" %}</a></li>
+            {% endif %}
+            {% if 'crm' in site_info.modules %}
+              <li class="nav-item"><a class="nav-link" href="{% url 'crm:contact' %}">{% translate "Contact" %}</a></li>
+            {% endif %}
+          {% endblock %}
+        </ul>
+        {% if site_info.phone %}
+          <a class="btn-site btn-site--primary site-nav__cta" href="{{ site_info.phone_href }}">{% blocktranslate with phone=site_info.phone %}Call {{ phone }}{% endblocktranslate %}</a>
+        {% endif %}
+      </div>
+    </div>
+  </nav>
+</header>

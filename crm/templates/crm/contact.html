@@ -1,0 +1,42 @@
+{% extends "base.html" %}
+{% load static i18n %}
+
+{% block title %}{% translate "Contact" %} | {{ site_info.name }}{% endblock %}
+{% block extra_head %}<link rel="stylesheet" href="{% static 'crm/crm.css' %}">{% endblock %}
+
+{% block content %}
+<section class="section">
+  <div class="container site-container contact-layout">
+    <div>
+      <h1 class="page-title">{% translate "Contact us" %}</h1>
+      <p class="page-lede">{% translate "Send us a message and we'll get back to you." %}</p>
+      <dl class="contact-details">
+        {% if site_info.phone %}<div><dt>{% translate "Phone" %}</dt><dd><a href="{{ site_info.phone_href }}">{{ site_info.phone }}</a></dd></div>{% endif %}
+        {% if site_info.email %}<div><dt>{% translate "Email" %}</dt><dd><a href="mailto:{{ site_info.email }}">{{ site_info.email }}</a></dd></div>{% endif %}
+        {% if site_info.hours %}<div><dt>{% translate "Hours" %}</dt><dd>{{ site_info.hours }}</dd></div>{% endif %}
+        {% if site_info.address %}<div><dt>{% translate "Where" %}</dt><dd>{{ site_info.address }}</dd></div>{% endif %}
+      </dl>
+    </div>
+
+    <form method="post" action="{% url 'crm:contact' %}" class="contact-form" novalidate>
+      {% csrf_token %}
+      {% if rate_limited %}
+        <p class="notice notice--error" role="alert">{% translate "We've received several messages from your network in the last hour. Please try again later, or call or email us directly." %}</p>
+      {% elif form.errors %}
+        <p class="notice notice--error" role="alert">{% translate "Please check the highlighted fields." %}</p>
+      {% endif %}
+      {% include "components/field.html" with field=form.name %}
+      {% include "components/field.html" with field=form.email %}
+      {% include "components/field.html" with field=form.phone %}
+      {% include "components/field.html" with field=form.message %}
+      {% include "components/field.html" with field=form.marketing_consent %}
+      <div class="field field--trap" aria-hidden="true">{% include "components/field.html" with field=form.website %}</div>
+      {{ form.started }}
+      {% if 'pages' in site_info.modules %}
+        <p class="field__help">{% url 'pages:privacy' as privacy_url %}{% blocktranslate %}We use your details only to answer your message. See our <a href="{{ privacy_url }}">privacy policy</a>.{% endblocktranslate %}</p>
+      {% endif %}
+      <button type="submit" class="btn-site btn-site--primary">{% translate "Send message" %}</button>
+    </form>
+  </div>
+</section>
+{% endblock %}

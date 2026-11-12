@@ -1,0 +1,14 @@
+name: Change request
+description: A new feature or a change to how the site works.
+labels: [change]
+body:
+  - type: textarea
+    id: change
+    attributes:
+      label: What should change and why
+    validations:
+      required: true
+  - type: textarea
+    id: acceptance
+    attributes:
+      label: How we'll know it's done

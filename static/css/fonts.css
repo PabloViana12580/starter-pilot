@@ -1,0 +1,6 @@
+/*
+ * Self-hosted web fonts (@font-face rules for files in static/fonts/).
+ * Empty until the project's design pass picks fonts: the tokens in app.css
+ * fall back to the system font stack. Fonts are never loaded from a CDN, so
+ * the Content Security Policy stays 'self'-only.
+ */

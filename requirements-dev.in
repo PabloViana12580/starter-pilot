@@ -1,0 +1,9 @@
+# Development and CI tools. Regenerate requirements-dev.txt with:
+#   pip-compile --generate-hashes requirements-dev.in
+-c requirements.txt
+pip-tools
+ruff
+coverage
+pip-audit
+bandit
+Pillow

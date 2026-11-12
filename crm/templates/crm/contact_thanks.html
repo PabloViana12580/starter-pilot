@@ -1,0 +1,14 @@
+{% extends "base.html" %}
+{% load i18n %}
+
+{% block title %}{% translate "Message sent" %} | {{ site_info.name }}{% endblock %}
+
+{% block content %}
+<section class="section">
+  <div class="container site-container prose">
+    <h1 class="page-title">{% translate "Message sent" %}</h1>
+    <p class="page-lede">{% translate "Thank you. We'll reply as soon as we can." %}</p>
+    <a class="btn-site btn-site--quiet" href="/">{% translate "Back to the home page" %}</a>
+  </div>
+</section>
+{% endblock %}

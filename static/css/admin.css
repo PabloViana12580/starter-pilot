@@ -1,0 +1,24 @@
+/* Administration branding: Django admin's own variables set from the site's palette. */
+:root,
+html[data-theme="light"] {
+  --primary: #24423A;
+  --secondary: #2F5649;
+  --accent: #E2B93B;
+  --primary-fg: #FFFFFF;
+  --header-color: #FFFFFF;
+  --header-branding-color: #FFFFFF;
+  --header-bg: #24423A;
+  --header-link-color: #FFFFFF;
+  --breadcrumbs-bg: #2F5649;
+  --link-fg: #24423A;
+  --link-hover-color: #2F5649;
+  --link-selected-fg: #1B1E1C;
+  --button-bg: #24423A;
+  --button-hover-bg: #2F5649;
+  --default-button-bg: #24423A;
+  --default-button-hover-bg: #2F5649;
+}
+
+/* Keep short values (phone numbers, dates) on one line in change lists. */
+#result_list td.field-phone,
+#result_list td.field-due_date { white-space: nowrap; }

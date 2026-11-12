@@ -1,0 +1,35 @@
+{% extends "base.html" %}
+{% load i18n %}
+
+{% block title %}{% translate "Privacy policy" %} | {{ site_info.name }}{% endblock %}
+
+{% block content %}
+<section class="section">
+  <div class="container site-container prose">
+    <h1 class="page-title">{% translate "Privacy policy" %}</h1>
+    <p class="page-lede">How {{ site_info.name }} handles the personal information you share through this website.</p>
+
+    <h2>Who is responsible</h2>
+    <p>{{ site_info.name }} (OWNER LEGAL NAME, COUNTRY) is responsible for your information. Contact: <a href="mailto:{{ site_info.email }}">{{ site_info.email }}</a>.</p>
+
+    <h2>What we collect and why</h2>
+    {% if 'crm' in site_info.modules %}
+      <p>When you send us a message, we keep your name, email address, phone number (if you give it), and your message, so we can answer you and follow up on your request. If you tick the box to receive news and offers, we also record that choice and when you made it.</p>
+    {% else %}
+      <p>This website does not ask for personal information. If you contact us by phone or email, we use your details only to answer you.</p>
+    {% endif %}
+
+    <h2>Cookies</h2>
+    <p>We use only the cookies needed for the site to work securely (for example, to protect forms against forgery). We do not use advertising or analytics cookies.</p>
+
+    <h2>Who can see it</h2>
+    <p>Only our staff. Our hosting and database providers store the information on our behalf. We do not sell or share your information.</p>
+
+    <h2>How long we keep it</h2>
+    <p>As long as needed to answer and serve you, then we delete it. You can ask us to delete it at any time.</p>
+
+    <h2>Your rights</h2>
+    <p>You can ask for a copy of the information we hold about you, ask us to correct or delete it, or withdraw your consent to news and offers. Write to <a href="mailto:{{ site_info.email }}">{{ site_info.email }}</a>.</p>
+  </div>
+</section>
+{% endblock %}

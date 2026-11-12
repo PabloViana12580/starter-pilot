@@ -1,0 +1,10 @@
+{% autoescape off %}{% if created %}New contact{% else %}Existing contact{% endif %}: {{ contact.name }}
+Email: {{ contact.email }}
+Phone: {{ contact.phone|default:"-" }}
+Agreed to news and offers: {{ contact.marketing_consent|yesno:"yes,no" }}
+
+Message:
+{{ message }}
+
+Open in the CRM: {{ admin_url }}
+{% endautoescape %}

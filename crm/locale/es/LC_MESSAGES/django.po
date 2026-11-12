@@ -1,0 +1,265 @@
+# Spanish translations for django-starter.
+# Copyright (C) 2026 ORGANIZATION
+# This file is distributed under the same license as the django-starter project.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2026.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: django-starter VERSION\n"
+"Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
+"POT-Creation-Date: 2026-11-12 17:35-0600\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language: es\n"
+"Language-Team: es <LL@li.org>\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.18.0\n"
+
+#, python-format
+msgid "Move to stage: %(stage)s"
+msgstr "Mover a la etapa: %(stage)s"
+
+msgid "Pipeline"
+msgstr "Embudo"
+
+msgid "Consent"
+msgstr "Consentimiento"
+
+msgid "Record"
+msgstr "Registro"
+
+msgid "open tasks"
+msgstr "tareas abiertas"
+
+msgid "Export selected contacts to CSV"
+msgstr "Exportar los contactos seleccionados a CSV"
+
+msgid "Download one contact's personal data (privacy request)"
+msgstr "Descargar los datos personales de un contacto (solicitud de privacidad)"
+
+msgid "Select exactly one contact."
+msgstr "Seleccione exactamente un contacto."
+
+msgid "due"
+msgstr "vence"
+
+msgid "Overdue"
+msgstr "Vencidas"
+
+msgid "Today"
+msgstr "Hoy"
+
+msgid "Upcoming"
+msgstr "Próximas"
+
+msgid "overdue"
+msgstr "vencida"
+
+msgid "Mark selected tasks as done"
+msgstr "Marcar las tareas seleccionadas como hechas"
+
+#, python-format
+msgid "%(count)d contact moved to %(stage)s."
+msgid_plural "%(count)d contacts moved to %(stage)s."
+msgstr[0] "%(count)d contacto movido a %(stage)s."
+msgstr[1] "%(count)d contactos movidos a %(stage)s."
+
+msgid "Customers (CRM)"
+msgstr "Clientes (CRM)"
+
+msgid "Your name"
+msgstr "Su nombre"
+
+msgid "Email"
+msgstr "Correo electrónico"
+
+msgid "Phone"
+msgstr "Teléfono"
+
+msgid "How can we help?"
+msgstr "¿En qué podemos ayudarle?"
+
+msgid "Send me occasional news and offers. I can unsubscribe at any time."
+msgstr "Envíenme novedades y ofertas de vez en cuando. Puedo darme de baja en cualquier momento."
+
+msgid "name"
+msgstr "nombre"
+
+msgid "tag"
+msgstr "etiqueta"
+
+msgid "tags"
+msgstr "etiquetas"
+
+msgid "New"
+msgstr "Nuevo"
+
+msgid "Contacted"
+msgstr "Contactado"
+
+msgid "Quoted"
+msgstr "Cotizado"
+
+msgid "Won"
+msgstr "Ganado"
+
+msgid "Lost"
+msgstr "Perdido"
+
+msgid "Website contact form"
+msgstr "Formulario de contacto del sitio"
+
+msgid "Added by staff"
+msgstr "Agregado por el personal"
+
+msgid "Imported"
+msgstr "Importado"
+
+msgid "Order"
+msgstr "Pedido"
+
+msgid "Appointment"
+msgstr "Cita"
+
+msgid "email"
+msgstr "correo electrónico"
+
+msgid "phone"
+msgstr "teléfono"
+
+msgid "company"
+msgstr "empresa"
+
+msgid "stage"
+msgstr "etapa"
+
+msgid "source"
+msgstr "origen"
+
+msgid "assigned to"
+msgstr "asignado a"
+
+msgid "agreed to news and offers"
+msgstr "aceptó recibir novedades y ofertas"
+
+msgid "Only email marketing to contacts who agreed."
+msgstr "Envíe correos de marketing solo a los contactos que aceptaron."
+
+msgid "consent changed"
+msgstr "consentimiento modificado"
+
+msgid "consent given through"
+msgstr "consentimiento dado mediante"
+
+msgid "created"
+msgstr "creado"
+
+msgid "updated"
+msgstr "actualizado"
+
+msgid "contact"
+msgstr "contacto"
+
+msgid "contacts"
+msgstr "contactos"
+
+msgid "Website message"
+msgstr "Mensaje del sitio web"
+
+msgid "Note"
+msgstr "Nota"
+
+msgid "Call"
+msgstr "Llamada"
+
+msgid "Meeting"
+msgstr "Reunión"
+
+msgid "System event"
+msgstr "Evento del sistema"
+
+msgid "type"
+msgstr "tipo"
+
+msgid "summary"
+msgstr "resumen"
+
+msgid "details"
+msgstr "detalles"
+
+msgid "author"
+msgstr "autor"
+
+msgid "when"
+msgstr "cuándo"
+
+msgid "timeline entry"
+msgstr "entrada del historial"
+
+msgid "timeline"
+msgstr "historial"
+
+msgid "task"
+msgstr "tarea"
+
+msgid "done"
+msgstr "hecha"
+
+msgid "done at"
+msgstr "hecha el"
+
+msgid "follow-up task"
+msgstr "tarea de seguimiento"
+
+msgid "follow-up tasks"
+msgstr "tareas de seguimiento"
+
+msgid "Contact"
+msgstr "Contacto"
+
+msgid "Contact us"
+msgstr "Contáctenos"
+
+msgid "Send us a message and we'll get back to you."
+msgstr "Envíenos un mensaje y le responderemos."
+
+msgid "Hours"
+msgstr "Horario"
+
+msgid "Where"
+msgstr "Dónde"
+
+msgid ""
+"We've received several messages from your network in the last hour. Please try again later, or "
+"call or email us directly."
+msgstr ""
+"Recibimos varios mensajes desde su red en la última hora. Inténtelo más tarde, o llámenos o "
+"escríbanos directamente."
+
+msgid "Please check the highlighted fields."
+msgstr "Revise los campos marcados."
+
+msgid "Send message"
+msgstr "Enviar mensaje"
+
+#, python-format
+msgid ""
+"We use your details only to answer your message. See our <a href=\"%(privacy_url)s\">privacy "
+"policy</a>."
+msgstr ""
+"Usamos sus datos solo para responder su mensaje. Consulte nuestra <a "
+"href=\"%(privacy_url)s\">política de privacidad</a>."
+
+msgid "Message sent"
+msgstr "Mensaje enviado"
+
+msgid "Thank you. We'll reply as soon as we can."
+msgstr "Gracias. Le responderemos lo antes posible."
+
+msgid "Back to the home page"
+msgstr "Volver a la página de inicio"
+

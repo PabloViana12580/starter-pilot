@@ -1,0 +1,14 @@
+{% extends "base.html" %}
+{% load i18n %}
+
+{% block title %}{% translate "About" %} | {{ site_info.name }}{% endblock %}
+
+{% block content %}
+<section class="section">
+  <div class="container site-container prose">
+    <h1 class="page-title">{% translate "About" %} {{ site_info.name }}</h1>
+    <p class="page-lede">{{ site_info.tagline }}</p>
+    <p>This site tests the django-starter skill from start to finish: scaffold, database, design pass, checks, and publishing. It holds no real business and no real customers.</p>
+  </div>
+</section>
+{% endblock %}

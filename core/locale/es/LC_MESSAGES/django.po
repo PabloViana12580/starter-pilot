@@ -1,0 +1,185 @@
+# Spanish translations for django-starter.
+# Copyright (C) 2026 ORGANIZATION
+# This file is distributed under the same license as the django-starter project.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2026.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: django-starter VERSION\n"
+"Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
+"POT-Creation-Date: 2026-11-12 17:35-0600\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language: es\n"
+"Language-Team: es <LL@li.org>\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.18.0\n"
+
+msgid "Bad request"
+msgstr "Solicitud no válida"
+
+msgid "The request could not be understood. Check the address or try again."
+msgstr "No se pudo entender la solicitud. Revise la dirección o inténtelo de nuevo."
+
+msgid "Access denied"
+msgstr "Acceso denegado"
+
+msgid "You don't have permission to open this page."
+msgstr "No tiene permiso para abrir esta página."
+
+msgid "Form expired"
+msgstr "El formulario caducó"
+
+msgid "This form was open too long or cookies are blocked. Go back, reload the page, and submit it again."
+msgstr ""
+"El formulario estuvo abierto demasiado tiempo o las cookies están bloqueadas. Vuelva atrás, "
+"recargue la página y envíelo de nuevo."
+
+msgid "Page not found"
+msgstr "Página no encontrada"
+
+msgid "The page you're looking for doesn't exist or has moved."
+msgstr "La página que busca no existe o se ha movido."
+
+msgid "Something went wrong"
+msgstr "Algo salió mal"
+
+msgid "The error has been logged. Please try again in a few minutes."
+msgstr "El error quedó registrado. Inténtelo de nuevo en unos minutos."
+
+msgid "Skip to content"
+msgstr "Saltar al contenido"
+
+msgid "optional"
+msgstr "opcional"
+
+msgid "Show"
+msgstr "Mostrar"
+
+msgid "Hide"
+msgstr "Ocultar"
+
+msgid "Contact"
+msgstr "Contacto"
+
+msgid "Information"
+msgstr "Información"
+
+msgid "About"
+msgstr "Nosotros"
+
+msgid "Privacy policy"
+msgstr "Política de privacidad"
+
+msgid "Terms of use"
+msgstr "Términos de uso"
+
+msgid "Administration"
+msgstr "Administración"
+
+msgid "Sign out"
+msgstr "Cerrar sesión"
+
+msgid "Staff sign in"
+msgstr "Acceso del personal"
+
+msgid "Main"
+msgstr "Principal"
+
+msgid "Menu"
+msgstr "Menú"
+
+#, python-format
+msgid "Call %(phone)s"
+msgstr "Llamar al %(phone)s"
+
+msgid "Go to the home page"
+msgstr "Ir a la página de inicio"
+
+msgid "Sign-in paused"
+msgstr "Acceso en pausa"
+
+msgid ""
+"Too many incorrect sign-in attempts for this account from your network. Wait a few minutes and "
+"try again, or ask the site administrator to unlock it."
+msgstr ""
+"Hubo demasiados intentos fallidos para esta cuenta desde su red. Espere unos minutos e inténtelo "
+"de nuevo, o pida al administrador del sitio que la desbloquee."
+
+msgid "Back to the website"
+msgstr "Volver al sitio web"
+
+msgid "Sign in"
+msgstr "Iniciar sesión"
+
+msgid "For staff accounts. Accounts are created by the site administrator."
+msgstr "Para cuentas del personal. El administrador del sitio crea las cuentas."
+
+msgid "Code"
+msgstr "Código"
+
+msgid "Authenticator app"
+msgstr "Aplicación de autenticación"
+
+msgid "Two-factor sign-in is on. If you lose your phone, ask an administrator to reset it."
+msgstr ""
+"La verificación en dos pasos está activada. Si pierde su teléfono, pida a un administrador que la"
+" restablezca."
+
+msgid "That code is not valid. Check the time on your phone and try again."
+msgstr "Ese código no es válido. Revise la hora de su teléfono e inténtelo de nuevo."
+
+msgid "That code is not valid. Enter the newest code your app shows."
+msgstr "Ese código no es válido. Escriba el código más reciente que muestra su aplicación."
+
+msgid "Sign-in security"
+msgstr "Seguridad de acceso"
+
+msgid "Two-factor sign-in"
+msgstr "Acceso en dos pasos"
+
+msgid "Leave this field empty"
+msgstr "Deje este campo vacío"
+
+msgid "Set up two-factor sign-in"
+msgstr "Configurar la verificación en dos pasos"
+
+msgid ""
+"Staff accounts need a code from an authenticator app (Google Authenticator, Microsoft "
+"Authenticator, 1Password...) at every sign-in."
+msgstr ""
+"Las cuentas del personal necesitan un código de una aplicación de autenticación (Google "
+"Authenticator, Microsoft Authenticator, 1Password...) en cada inicio de sesión."
+
+msgid "Scan this code with your authenticator app."
+msgstr "Escanee este código con su aplicación de autenticación."
+
+msgid "QR code for your authenticator app"
+msgstr "Código QR para su aplicación de autenticación"
+
+msgid "Can't scan? Enter this key instead"
+msgstr "¿No puede escanearlo? Escriba esta clave"
+
+msgid "Enter the 6-digit code the app shows."
+msgstr "Escriba el código de 6 dígitos que muestra la aplicación."
+
+msgid "Turn on two-factor sign-in"
+msgstr "Activar la verificación en dos pasos"
+
+msgid "Enter your code"
+msgstr "Escriba su código"
+
+msgid ""
+"Open your authenticator app and enter the current code. Lost your phone? Ask an administrator to "
+"reset your two-factor sign-in."
+msgstr ""
+"Abra su aplicación de autenticación y escriba el código actual. ¿Perdió su teléfono? Pida a un "
+"administrador que restablezca su verificación en dos pasos."
+
+msgid "Continue"
+msgstr "Continuar"
+

@@ -1,0 +1,12 @@
+{
+  "starter_version": "0.1.0",
+  "created": "2026-11-12",
+  "name": "Starter Pilot",
+  "slug": "starter-pilot",
+  "language": "en",
+  "time_zone": "America/Chicago",
+  "modules": [
+    "website",
+    "crm"
+  ]
+}

@@ -1,0 +1,13 @@
+/* Website pages (home and sections). Uses the tokens from css/app.css. The design pass reshapes this per project. */
+
+.hero { padding-block: var(--space-7) var(--space-8); }
+.hero__grid { display: grid; gap: var(--space-7); align-items: center; }
+@media (min-width: 992px) { .hero__grid { grid-template-columns: 5fr 6fr; } }
+.hero__title { font-size: var(--text-3xl); line-height: 1.02; letter-spacing: -0.03em; margin-bottom: var(--space-5); max-width: 14ch; }
+.hero__lede { font-size: var(--text-lg); color: var(--color-muted); max-width: 34rem; margin-bottom: var(--space-6); }
+.hero__media { aspect-ratio: 4 / 3; border-radius: var(--radius-lg); background: var(--color-surface-alt); }
+.hero__media img { width: 100%; height: 100%; object-fit: cover; border-radius: var(--radius-lg); }
+
+.feature-grid { display: grid; gap: var(--space-6); grid-template-columns: repeat(auto-fill, minmax(min(100%, 16rem), 1fr)); }
+.feature h3 { font-size: var(--text-xl); margin-bottom: var(--space-2); }
+.feature p { color: var(--color-muted); margin: 0; }

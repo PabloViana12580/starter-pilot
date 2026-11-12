@@ -1,0 +1,25 @@
+{% extends "base.html" %}
+{% load i18n %}
+
+{% block title %}{% translate "Enter your code" %} | {{ site_info.name }}{% endblock %}
+{% block body_class %}auth-page{% endblock %}
+
+{% block body %}
+<main class="auth" id="main">
+  <div class="auth__card">
+    {% include "components/brand.html" %}
+    <h1 class="auth__title">{% translate "Enter your code" %}</h1>
+    <p class="auth__lede">{% translate "Open your authenticator app and enter the current code. Lost your phone? Ask an administrator to reset your two-factor sign-in." %}</p>
+    <form method="post" novalidate>
+      {% csrf_token %}
+      <input type="hidden" name="next" value="{{ next }}">
+      {% include "components/field.html" with field=form.token %}
+      <button type="submit" class="btn-site btn-site--primary btn-site--block">{% translate "Continue" %}</button>
+    </form>
+    <form method="post" action="{% url 'logout' %}" class="auth__help">
+      {% csrf_token %}
+      <button type="submit" class="link-button">{% translate "Sign out" %}</button>
+    </form>
+  </div>
+</main>
+{% endblock %}

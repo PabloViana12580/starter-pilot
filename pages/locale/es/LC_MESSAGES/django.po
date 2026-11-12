@@ -1,0 +1,43 @@
+# Spanish translations for django-starter.
+# Copyright (C) 2026 ORGANIZATION
+# This file is distributed under the same license as the django-starter project.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2026.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: django-starter VERSION\n"
+"Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
+"POT-Creation-Date: 2026-11-12 17:35-0600\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language: es\n"
+"Language-Team: es <LL@li.org>\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.18.0\n"
+
+msgid "About"
+msgstr "Nosotros"
+
+msgid "Get in touch"
+msgstr "Contáctenos"
+
+msgid "About us"
+msgstr "Quiénes somos"
+
+msgid "More about us"
+msgstr "Más sobre nosotros"
+
+#, python-format
+msgid "Call %(phone)s"
+msgstr "Llamar al %(phone)s"
+
+msgid "Privacy policy"
+msgstr "Política de privacidad"
+
+msgid "Terms of use"
+msgstr "Términos de uso"
+
